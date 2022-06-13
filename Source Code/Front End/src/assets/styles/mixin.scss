@@ -1,0 +1,48 @@
+@mixin bgImage($path, $file, $height: null, $position: left, $size: contain) {
+    background: url('#{$path}/#{$file}');
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position: $position;
+    @if($height) {
+      height: $height;
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius !important;
+    border-top-right-radius: $radius !important;
+    -webkit-border-top-left-radius: $radius !important;
+    border-top-left-radius: $radius !important;
+}
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius !important;
+    border-bottom-right-radius: $radius !important;
+    -webkit-border-bottom-left-radius: $radius !important;
+    border-bottom-left-radius: $radius !important;
+}
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+@mixin border-top-left-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}

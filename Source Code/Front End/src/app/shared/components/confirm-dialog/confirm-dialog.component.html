@@ -1,0 +1,12 @@
+
+<section>
+  <div mat-dialog-content>
+    <h2 [innerHtml]="message"></h2>
+  </div>
+  
+  <div mat-dialog-actions style="float: right;">
+    <button mat-button (click)="onDismiss()">No</button>
+    <button mat-raised-button color="primary" (click)="onConfirm()">Yes</button>
+  </div>
+
+</section>

@@ -1,0 +1,48 @@
+
+
+
+
+    <div class="row mt-4 mr-1" >
+        <div class="col-12" style="text-align:right">
+            <button class="btn-regular" title="View Appointment" (click)="navigateToListAppointmentScreen()">
+                View Appointments
+            </button>
+        </div>
+    </div>
+
+<div class="register-wrapper mb-4 mt-4" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Add Appointment Medicine</mat-card-title>
+        </mat-card-header>
+        <form class="register-form" [formGroup]="fgAddAppointment">
+            <mat-card-content>
+                <mat-form-field class="field-full-width">
+                    <mat-label>Appointment Id</mat-label>
+                    <mat-select formControlName="appointmentId" required>
+                        <mat-option [value]="data.AppointmentId" *ngFor="let data of appointmentIdList">{{data.AppointmentCode}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="field-full-width">
+                    <mat-label>Medicine Id</mat-label>
+                    <mat-select formControlName="medicineId" required>
+                        <mat-option [value]="data.MedicineId" *ngFor="let data of medicineIdList">{{data.Name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+        
+                <mat-form-field class="field-full-width">
+                    <input matInput placeholder="Limit" formControlName="limit" appNumericWithDot>
+                </mat-form-field>
+            </mat-card-content>
+            <button mat-stroked-button color="primary" class="btn-block" (click)="createAppointment()">Create</button>
+         
+        </form>
+    </mat-card>
+</div>
+<section class="spinner-style">
+    <mat-spinner id="matSpinner" [diameter]="50" *ngIf="isDataLoading"></mat-spinner>
+</section>

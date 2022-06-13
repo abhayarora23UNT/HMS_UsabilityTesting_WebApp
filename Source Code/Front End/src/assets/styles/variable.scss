@@ -1,0 +1,63 @@
+$font-family: 'Open Sans', sans-serif;
+$font-Awesome-family:   'Font Awesome 5 pro';
+
+//backgrounds
+$bg-body:               #ffffff;
+$bg-content-wrapper:    #f8f8f8;
+$bg-common:             #144d97;
+$bg-common-pdf-icon:    #880200;
+$bg-common-excel-icon:  #007241;
+$grid-alternate-row:    #edf6f8;
+$grid-row-hover:        #cfedfa;
+$menu-bg:               #e4e4e4;
+$menu-selected-bg:      #f0f0f0;
+$menu-hover-bg:         #c3c3c3;
+$footer-bg:             #444444;
+$error-box-bg:          #ff6358;
+
+//buttons background
+$btn-delete:            #d01613;
+$btn-green:             #00a25d;
+$btn-search:            #e6ac00;
+$btn-grey:              #707070;
+$btn-icn:               #515151;
+$btn-icn-save:          #575757;
+
+
+//btn-text
+$btn-text:              #484848;
+
+//input-background
+$required-bg:           #ffffc0;
+$disabled-bg:           #e5e5e5;
+$grouping-bg:           #edf6fa;
+
+//font-colors
+$menu-link-txt:         #000000;
+$sub-menu-link-txt :    #004e63;
+$alternate-row-txt:     #313131;
+$lbl-txt:               #484848;
+$txt-white:             #ffffff;
+$txt-blue:              #005596;
+
+// border colors
+$menu-border-right:     #d7d7d7;
+$menu-border-bottom:    #bfbfbf;
+$input-border:          #b7b7b7;
+
+// font weight
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+
+// calling images
+$base-img-path: '/assets/images';
+$image-path: $base-img-path;
+
+//font-size
+$base-font-size:        16px;
+$normal-font-size:      1.000em;
+$medium-font-size:      0.875em;
+$small-font-size:       0.750em;
+$page-title-size:       1.750em;

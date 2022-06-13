@@ -1,0 +1,12 @@
+@import '../../../assets/styles/variable.scss';
+@import '../../../assets/styles/mixin.scss';
+
+.footer-wrapper {
+    background: $footer-bg;
+    color: $txt-white
+}
+
+.footer-text{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

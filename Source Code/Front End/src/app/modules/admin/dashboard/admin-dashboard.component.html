@@ -1,0 +1,54 @@
+<mat-toolbar class="header-menu">
+    <button class="headerBtns" title="Services" (click)="openServicesModal()">
+        SERVICES
+    </button>
+    <button class="headerBtns" title="About Us" (click)="openAboutUsModal()">
+        ABOUT US
+    </button>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" mode="side" [(opened)]="opened" class="mat-elevation-z8">
+
+        <button mat-button class="menu-button" [routerLink]="['home']">
+            <mat-icon>home</mat-icon>
+            <span style="padding-left: 5px;">Dashboard</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listHospitalBranch']">
+            <mat-icon>person</mat-icon>
+            <span style="padding-left: 5px;">Hospital Branch</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listDoctor']">
+            <mat-icon>tablet</mat-icon>
+            <span style="padding-left: 5px;">Doctor</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listPatient']">
+            <mat-icon>timelapse</mat-icon>
+            <span style="padding-left: 5px;">Patient</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listSpecialization']">
+            <mat-icon>assistant</mat-icon>
+            <span style="padding-left: 5px;">Specialization</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listRoomType']">
+            <mat-icon>room</mat-icon>
+            <span style="padding-left: 5px;">Room Type</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listOperativeRoom']">
+            <mat-icon>compare</mat-icon>
+            <span style="padding-left: 5px;">Operative room</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listTreatment']">
+            <mat-icon>gradient</mat-icon>
+            <span style="padding-left: 5px;">Treatment</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['listMedicine']">
+            <mat-icon>settings_overscan</mat-icon>
+            <span style="padding-left: 5px;">Medicine</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content style="margin-left: 210px;">
+
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

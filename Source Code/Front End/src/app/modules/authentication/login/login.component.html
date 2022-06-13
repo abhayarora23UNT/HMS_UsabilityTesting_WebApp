@@ -1,0 +1,31 @@
+<div class="register-wrapper mt-4" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>LOG IN</mat-card-title>
+        </mat-card-header>
+        <form class="login-form" [formGroup]="fgLogin">
+            <mat-card-content style="margin-top: 30px;">
+                <mat-form-field class="field-full-width">
+                    <input matInput placeholder="Username" formControlName="userName" required appLimitTo=13
+                        appOnlyAlphaNumeric>
+                </mat-form-field>
+                <mat-form-field class="field-full-width">
+                    <input matInput placeholder="Password" formControlName="password" required type="password">
+                </mat-form-field>
+                </mat-card-content>
+                
+                <button mat-stroked-button color="primary" class="btn-block" (click)="loginUser()">Log in
+                </button>
+
+                <p class="message" style="margin-top: 10px;"><span class="already-rgtr"></span>
+                    <a class="txt-line head-title" href="#" routerLink="/authentication/register">Register as a new user</a>
+                </p>
+                <!-- <p class="message"><span class="already-rgtr"></span>
+                <a class="txtline headtitle align" href="#" routerLink="/home/home">Back to Home</a>
+                </p> -->
+        </form>
+    </mat-card>
+</div>
+<section class="spinner-style">
+    <mat-spinner id="matSpinner" [diameter]="50" *ngIf="isDataLoading"></mat-spinner>
+</section>

@@ -1,0 +1,19 @@
+<div class="content" style="margin-top: 25px; padding-left: 10px;">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" *ngFor="let data of dashboardRecordsList,let i=index">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header class="center-txt">
+                    <mat-card-title>
+                        <mat-icon [style.color]="getStyleColor(i)"> {{data?.icon}}</mat-icon>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="center-txt">
+                    {{data?.count}}
+                </mat-card-content>
+                <mat-card-actions class="center-txt" style="text-transform: uppercase;">
+                    {{data?.title}}
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

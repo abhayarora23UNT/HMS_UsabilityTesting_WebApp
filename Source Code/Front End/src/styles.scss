@@ -1,0 +1,216 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../src/assets/styles/all.min.css";
+@import '../src/assets/styles/variable.scss';
+@import '../src/assets/styles/mixin.scss';
+@import "../node_modules/ngx-toastr/toastr.css";
+
+// html, body {
+//      height: 100%;margin: 0;overflow: hidden;
+// }
+
+html, body, app-root {
+  height: 100%;
+}
+
+.flex-grow {
+  flex:1;
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+}
+
+.main {
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.app-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hms-header{
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.hms-footer{
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+
+.main-content{
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding: 3px 5px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.app-header {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+
+
+.box {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 330px;
+}
+
+.box.back {
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  top: -20px;
+  opacity: .8;
+  z-index: -1;
+}
+
+.box:before {
+  content: "";
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: -10px;
+  background: rgba(255, 255, 255, .6);
+  left: 0;
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  z-index: -1;
+}
+
+.register-wrapper .register-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+.register-wrapper .field-full-width,
+.register-wrapper .btn-block {
+  width: 100%;
+}
+.register-wrapper mat-card-header {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+}
+.register-wrapper mat-card-header mat-card-title {
+  font-size: 30px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.register-wrapper .mat-card {
+  padding: 40px 70px 50px;
+}
+.register-wrapper .mat-stroked-button {
+  border: 1px solid $txt-blue;
+  line-height: 45px;
+  background: $txt-blue;
+}
+.register-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.8375em 0;
+}
+
+.btn-block .mat-button-wrapper{
+    color: $txt-white;
+}
+.txt-line {
+    text-decoration: underline;
+  }
+  .head-title {
+    color: var(--text-link);
+  }
+
+.spinner-style{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9999999
+}
+
+.toast-custom{
+  top: 80px;
+  right: 25px;
+}
+
+.center-txt{
+  text-align: center;
+  justify-content: center;
+}
+
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 200px;
+  background-color: #752525;
+}
+
+.header-menu{
+  justify-content: end;
+  height: 45px;
+  button{
+      background: #20727E;
+      color: white;
+      padding: 3px 10px;
+      margin-left: 5px;
+      font-weight:500;
+      font-size: 11px;
+      border-radius: 2px !important;
+      height: 40px;
+  }
+}
+
+.btn-regular{
+      background: #479863;
+      color: white;
+      padding: 3px 10px;
+      font-weight:500;
+      font-size: 13px;
+      border-radius: 2px !important;
+      height: 40px;
+}
+.no-records{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.patient-nav .mat-expansion-panel-content	.mat-expansion-panel-body{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.txt-center{
+  text-align: center !important;
+}
