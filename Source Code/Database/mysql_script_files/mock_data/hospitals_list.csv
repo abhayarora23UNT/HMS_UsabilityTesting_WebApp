@@ -1,0 +1,3 @@
+HospitalId,HospitalCode,Name,Address1,Address2,City,Phone1,Phone2,Email,Description
+4,HSP1001,"Saroj Speciality","Apt A",11123,Denton,1231221,NULL,saroj_denton@outlook.com,"Heart Institute"
+5,HSP1002,"Cluster Super",Denton,122,Dallas,2132121321,NULL,cluster@outlook.com,adasa

@@ -1,0 +1,3 @@
+DoctorId,Name,Address1,Address2,City,Phone,Mobile,Email,Salary,Designation,Gender
+25,"John ",Denton,232112,Dallas,2332432432,3243232432,john12@hms.com,0.00,Neurologist,Male
+26,Ryan,aadsa,dsadsa,Denton,32432,324324,ryan12@hms.com,0.00,Orthodentist,Male

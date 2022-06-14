@@ -1,0 +1,2 @@
+TreatmentId,TreatmentCode,Name,Duration,DoctorId,PatientId,OperativeRoomId
+1,TRT1001,Test,2,25,1,1

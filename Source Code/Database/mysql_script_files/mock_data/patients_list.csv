@@ -1,0 +1,2 @@
+PatientId,PatientCode,Name,Address1,Address2,City,Phone,GuardianPhone,Email,Disease,Gender
+1,PAT1001,"Louise Mane",Dallas,NULL,Dallas,321324324,3243242,louse12@gmail.com,Typhoid,Female
