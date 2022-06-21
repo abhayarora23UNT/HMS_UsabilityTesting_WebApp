@@ -18,7 +18,8 @@ export class AddPatientComponent implements OnInit {
 
   Genders: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
   fgAddPatient!: FormGroup;
   isDataLoading = false;
