@@ -21,7 +21,8 @@ export class EditPatientComponent implements OnInit, OnDestroy {
   private onDestroy$: Subject<void> = new Subject<void>();
   genderList: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
 
   editPatientData: any;
