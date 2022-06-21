@@ -17,7 +17,8 @@ import { ToastMessageService } from 'src/app/core/services/utils/toast-message.s
 export class AddPatientComponent implements OnInit,OnDestroy {
   Genders: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
   fgAddPatient!: FormGroup;
   isDataLoading = false;
