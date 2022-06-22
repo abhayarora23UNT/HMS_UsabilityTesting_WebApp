@@ -15,7 +15,17 @@ export class NavigationGuard implements CanDeactivate<any> {
             return this.showUnsavedChangesDialog();
         } else if (component.fgEditAppointment !== undefined && component.fgEditAppointment !== null && component.fgEditAppointment.dirty) {
             return this.showUnsavedChangesDialog();
-        } else {
+        }else if (component.fgAddTreatment !== undefined && component.fgAddTreatment !== null && component.fgAddTreatment.dirty) {
+            return this.showUnsavedChangesDialog();
+        }else if (component.fgAddPatient !== undefined && component.fgAddPatient !== null && component.fgAddPatient.dirty) {
+            return this.showUnsavedChangesDialog();
+        }else if (component.fgAddDoctor !== undefined && component.fgAddDoctor !== null && component.fgAddDoctor.dirty) {
+            return this.showUnsavedChangesDialog();
+        } else if (component.fgAddSpecialization !== undefined && component.fgAddSpecialization !== null && component.fgAddSpecialization.dirty) {
+            return this.showUnsavedChangesDialog();
+        }else if (component.AddTreatment !== undefined && component.AddTreatment !== null && component.AddTreatment.dirty) {
+            return this.showUnsavedChangesDialog();
+        }else {
             return true;
         }
     }

@@ -60,6 +60,7 @@ const routes: Routes = [
 
       {
         path: 'addDoctor',
+        canDeactivate: [NavigationGuard],
         component: AddDoctorComponent,
       },
       {
@@ -73,6 +74,7 @@ const routes: Routes = [
       },
       {
         path: 'addSpecialization',
+        canDeactivate: [NavigationGuard],
         component: AddSpecializationComponent,
       },
       {
@@ -136,6 +138,7 @@ const routes: Routes = [
       },
       {
         path: 'addPatient',
+        canDeactivate: [NavigationGuard],
         component: AddPatientComponent,
       },
       {
@@ -150,6 +153,7 @@ const routes: Routes = [
 
       {
         path: 'addTreatment',
+        canDeactivate: [NavigationGuard],
         component: AddTreatmentComponent,
       },
       {
