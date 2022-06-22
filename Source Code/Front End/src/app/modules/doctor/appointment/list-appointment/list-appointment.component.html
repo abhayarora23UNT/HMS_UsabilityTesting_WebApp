@@ -23,10 +23,28 @@
                     <td mat-cell *matCellDef="let element"> {{element.doctorId}} </td>
                 </ng-container>
 
+                <!-- Doctor Name Column -->
+                <ng-container matColumnDef="doctorName">
+                    <th class="w-20" mat-header-cell *matHeaderCellDef> Doctor_Name</th>
+                    <td mat-cell *matCellDef="let element"> {{element.doctorName}} </td>
+                </ng-container>
+
                 <!-- Patient Id Column -->
                 <ng-container matColumnDef="patientId">
                     <th class="w-20" mat-header-cell *matHeaderCellDef> Patient_Id</th>
                     <td mat-cell *matCellDef="let element"> {{element.patientId}} </td>
+                </ng-container>
+
+                <!-- Patient Name Column -->
+                <ng-container matColumnDef="patientName">
+                    <th class="w-20" mat-header-cell *matHeaderCellDef> Patient_Name</th>
+                    <td mat-cell *matCellDef="let element"> {{element.patientName}} </td>
+                </ng-container>
+
+                <!-- Hospital Name Column -->
+                <ng-container matColumnDef="hospitalName">
+                    <th class="w-20" mat-header-cell *matHeaderCellDef> Hospital_Name</th>
+                    <td mat-cell *matCellDef="let element"> {{element.hospitalName}} </td>
                 </ng-container>
 
                 <!-- Fee Column -->
