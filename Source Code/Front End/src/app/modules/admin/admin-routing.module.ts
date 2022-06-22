@@ -69,7 +69,6 @@ const routes: Routes = [
       },
       {
         path: 'editDoctor',
-        canDeactivate: [NavigationGuard],
         component: EditDoctorComponent,
       },
       {
@@ -83,12 +82,12 @@ const routes: Routes = [
       },
       {
         path: 'editSpecialization',
-        canDeactivate: [NavigationGuard],
         component: EditSpecializationComponent,
       },
 
       {
         path: 'addHospitalBranch',
+        canDeactivate: [NavigationGuard],
         component: AddHospitalBranchComponent,
       },
       {
@@ -97,7 +96,6 @@ const routes: Routes = [
       },
       {
         path: 'editHospitalBranch',
-        canDeactivate: [NavigationGuard],
         component: EditHospitalBranchComponent,
       },
 
@@ -111,7 +109,6 @@ const routes: Routes = [
       },
       {
         path: 'editMedicine',
-        canDeactivate: [NavigationGuard],
         component: EditMedicineComponent,
       },
       {
@@ -124,7 +121,6 @@ const routes: Routes = [
       },
       {
         path: 'editRoomType',
-        canDeactivate: [NavigationGuard],
         component: EditRoomTypeComponent,
       },
 
@@ -147,7 +143,6 @@ const routes: Routes = [
       },
       {
         path: 'editPatient',
-        canDeactivate: [NavigationGuard],
         component: EditPatientComponent,
       },
 
@@ -162,7 +157,6 @@ const routes: Routes = [
       },
       {
         path: 'editTreatment',
-        canDeactivate: [NavigationGuard],
         component: EditTreatmentComponent,
       },
       {
@@ -175,7 +169,6 @@ const routes: Routes = [
       },
       {
         path: 'editOperativeRoom',
-        canDeactivate: [NavigationGuard],
         component: EditOperativeComponent,
       },
     ]

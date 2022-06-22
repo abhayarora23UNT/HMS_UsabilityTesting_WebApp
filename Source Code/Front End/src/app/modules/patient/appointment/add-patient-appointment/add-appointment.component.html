@@ -55,7 +55,7 @@
                     <input matInput placeholder="Disease Notes" formControlName="diseaseNotes">
                 </mat-form-field>
                 <mat-form-field class="field-full-width">
-                    <input matInput placeholder="Fee" formControlName="fee" appNumericWithDot>
+                    <input matInput placeholder="Fee" formControlName="fee" appNumericWithDot required>
                 </mat-form-field>
             </mat-card-content>
             <button mat-stroked-button color="primary" class="btn-block" (click)="createAppointment()">Create</button>

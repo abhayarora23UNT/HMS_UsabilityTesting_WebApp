@@ -39,7 +39,6 @@ const routes: Routes = [
       },
       {
         path: 'editAppointment',
-        canDeactivate: [NavigationGuard],
         component: EditAppointmentComponent,
       },
       {

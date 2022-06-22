@@ -16,7 +16,7 @@ import { ToastMessageService } from 'src/app/core/services/utils/toast-message.s
 })
 export class AddAppointmentMedicineComponent implements OnInit {
 
-  fgAddAppointment!: FormGroup;
+  fgAddAppointmentMedicine!: FormGroup;
   isDataLoading = false;
   private onDestroy$: Subject<void> = new Subject<void>();
   appointmentIdList: any = []; // dropdown list for hospital Id
@@ -48,7 +48,7 @@ export class AddAppointmentMedicineComponent implements OnInit {
    * Method to create form group
    */
   createFormGroup() {
-    this.fgAddAppointment = this.formBuilder.group({
+    this.fgAddAppointmentMedicine = this.formBuilder.group({
       appointmentId: ['', Validators.required],
       apptMedicineId: [''],
       medicineId: ['', Validators.required],
@@ -60,10 +60,10 @@ export class AddAppointmentMedicineComponent implements OnInit {
    * Method to create appointment
    */
   createAppointment() {
-    if (this.fgAddAppointment.status == Constants.FormInvalid) {
+    if (this.fgAddAppointmentMedicine.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
-      const fgValue = JSON.parse(JSON.stringify(this.fgAddAppointment.value));
+      const fgValue = JSON.parse(JSON.stringify(this.fgAddAppointmentMedicine.value));
       fgValue.limit=+fgValue.limit;
       console.log('data is  ' + fgValue);
       this.callCreateAppointmentApi(fgValue);
@@ -83,6 +83,7 @@ export class AddAppointmentMedicineComponent implements OnInit {
           this.isDataLoading = false;
           if (retData.status) {
             this.toastService.successMessage(Messages.CreateDocAppointmentSuccess);
+            this.fgAddAppointmentMedicine.markAsPristine();
             this.navigateToListAppointmentScreen();
           } else {
             this.toastService.errorMessage(retData.message);
