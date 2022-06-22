@@ -22,7 +22,8 @@ export class EditDoctorComponent implements OnInit , OnDestroy{
 
   genderList: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
 
   editDoctorData: any;
