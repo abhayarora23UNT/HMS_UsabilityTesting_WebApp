@@ -16,7 +16,7 @@ export class AppComponent {
   }
 
   /**
- * Function for showing/hiding spinner while routing
+ * Function for showing/hiding spinner while  routing
  */
   routerInterceptor() {
     this.router.events.subscribe({
