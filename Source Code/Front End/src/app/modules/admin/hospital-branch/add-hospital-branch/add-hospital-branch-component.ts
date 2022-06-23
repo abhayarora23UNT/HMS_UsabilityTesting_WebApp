@@ -50,14 +50,18 @@ export class AddHospitalBranchComponent implements OnInit , OnDestroy {
     this.router.navigate(['admin/dashboard/listHospitalBranch']);
   }
 
-  createHospitalBranch(){
+  createHospitalBranch(res : any){
+    if(res.length < 10){
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+     }
+     else{
     if (this.fgAddHospitalBranch.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
       const fgValue = JSON.parse(JSON.stringify(this.fgAddHospitalBranch.value));
       console.log('data is  ' + fgValue);
       this.callCreateHospitalBranchApi(fgValue);
-    }
+    }}
   }
    /**
     * Method to called create appointment api

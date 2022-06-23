@@ -13,12 +13,12 @@ export class BaseHttpService {
   };
 
   constructor(private httpClient: HttpClient, protected apiConfig: ConfigDataProvider, ) { }
-   baseUrl: string = 'http://192.168.254.35:8087/';
+   //baseUrl: string = 'http://192.168.254.35:8087/';
    //baseUrl: string = 'http://172.20.1.28:8087/';
    
   // baseUrl: string = 'http://localhost:58853/';
   // baseUrl: string = 'https://unt-hms-api.azurewebsites.net/';
-  
+  baseUrl: string = 'http://127.0.0.1:8080/';
   /**
    * Function used for HTTP get
    * @param relativeUrl API endpoint

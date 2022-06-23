@@ -20,6 +20,7 @@ export enum Messages {
     Max_Length_Validation = 'Maximum characters allowed is ',
     Min_Length_Validation = 'Minimum characters allowed is ',
     Max_Length_Validation_int = 'Maximum digits allowed is ',
+    phn_Length_valdation = 'Please enter 10 digits phone number',
     Required_Validation = 'This is a required field',
     Invalid_Date_Entered = 'Invalid date entered',
     UnAuthorizedAccess = 'You are not authorized to use this application',
