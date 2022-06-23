@@ -76,6 +76,8 @@ export enum Messages {
 
     Password_Validate_Message='New Password and Confirm New Password should be same',
     No_Records_Message='No Records Found',
+    Phone1_Field_Message='for field Phone 1',
+    Phone2_Field_Message='for field Phone 2',
 }
 
 
