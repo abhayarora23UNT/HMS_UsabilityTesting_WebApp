@@ -73,10 +73,14 @@ export class EditHospitalBranchComponent implements OnInit , OnDestroy {
     this.router.navigate(['admin/dashboard/listHospitalBranch']);
   }
 
-  editHospitalBranch(res : any) {
-    if(res.length < 10){
-      this.toastService.errorMessage(Messages.phn_Length_valdation);
-     }
+  editHospitalBranch() {
+    const phone1Val = this.fgEditHospitalBranch.controls['phone1'].value;
+    const phone2Val = this.fgEditHospitalBranch.controls['phone2'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation + ' ' + Messages.Phone1_Field_Message);
+    } else if (phone2Val !== '' && phone2Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation + ' ' + Messages.Phone2_Field_Message);
+    }
      else{
     if (this.fgEditHospitalBranch.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
