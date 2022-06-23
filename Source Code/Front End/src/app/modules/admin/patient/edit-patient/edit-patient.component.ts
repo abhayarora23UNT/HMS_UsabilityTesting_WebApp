@@ -81,19 +81,21 @@ export class EditPatientComponent implements OnInit, OnDestroy {
     this.router.navigate(['admin/dashboard/listPatient']);
   }
 
-  editPatient(res:any) {
-    if(res.length < 10){
+  editPatient() {
+    const phone1Val = this.fgEditPatient.controls['phone'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
       this.toastService.errorMessage(Messages.phn_Length_valdation);
-     }
-     else{
-    if (this.fgEditPatient.status == Constants.FormInvalid) {
-      this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
-    } else {
-      const fgValue = JSON.parse(JSON.stringify(this.fgEditPatient.value));
-      console.log('data is  ' + fgValue);
-      this.callPatientApi(fgValue);
     }
-  }}
+    else {
+      if (this.fgEditPatient.status == Constants.FormInvalid) {
+        this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
+      } else {
+        const fgValue = JSON.parse(JSON.stringify(this.fgEditPatient.value));
+        console.log('data is  ' + fgValue);
+        this.callPatientApi(fgValue);
+      }
+    }
+  }
 
   /**
 * Method to called update appointment api

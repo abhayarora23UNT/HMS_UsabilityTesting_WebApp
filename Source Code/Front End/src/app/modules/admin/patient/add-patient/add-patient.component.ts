@@ -50,10 +50,11 @@ export class AddPatientComponent implements OnInit,OnDestroy {
       gender: ['', Validators.required],
     });
   }
-  createPatient(res: any){
-    if(res.length < 10){
+  createPatient(){
+    const phone1Val = this.fgAddPatient.controls['phone'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
       this.toastService.errorMessage(Messages.phn_Length_valdation);
-     }
+    }
      else{
     if (this.fgAddPatient.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
