@@ -43,12 +43,13 @@
                
                 <mat-form-field appearance="outline" class="field-full-width">
                     <mat-label>Appointment Date</mat-label>
-                    <input readonly formControlName="appt_Date" matInput [matDatepicker]="StartDatePicker">
+                    <input matInput formControlName="appt_Date" matInput [matDatepicker]="StartDatePicker" >
                     <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="StartDatePicker">
                     </mat-datepicker-toggle>
                     <mat-datepicker #StartDatePicker></mat-datepicker>
                 </mat-form-field>
+                
 
   
                 <mat-form-field class="field-full-width">
