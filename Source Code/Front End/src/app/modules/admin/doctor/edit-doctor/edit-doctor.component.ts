@@ -85,7 +85,11 @@ export class EditDoctorComponent implements OnInit , OnDestroy{
   }
 
   
-    editDoctor() {
+    editDoctor(res:any) {
+      if(res.length < 10){
+        this.toastService.errorMessage(Messages.phn_Length_valdation);
+       }
+       else{
       if (this.fgEditDoctor.status == Constants.FormInvalid) {
         this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
       } else {
@@ -93,7 +97,7 @@ export class EditDoctorComponent implements OnInit , OnDestroy{
         console.log('data is  ' + fgValue);
         this.callDoctorApi(fgValue);
       }
-    }
+    }}
 
       /**
     * Method to called update appointment api

@@ -50,7 +50,11 @@ export class AddPatientComponent implements OnInit,OnDestroy {
       gender: ['', Validators.required],
     });
   }
-  createPatient(){
+  createPatient(res: any){
+    if(res.length < 10){
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+     }
+     else{
     if (this.fgAddPatient.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
@@ -58,7 +62,7 @@ export class AddPatientComponent implements OnInit,OnDestroy {
       console.log('data is  ' + fgValue);
       this.callCreatePatientApi(fgValue);
     }
-  }
+  }}
 
   /**
     * Method to called create appointment api

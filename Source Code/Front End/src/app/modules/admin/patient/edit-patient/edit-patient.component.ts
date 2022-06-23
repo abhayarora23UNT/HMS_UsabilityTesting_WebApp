@@ -81,7 +81,11 @@ export class EditPatientComponent implements OnInit, OnDestroy {
     this.router.navigate(['admin/dashboard/listPatient']);
   }
 
-  editPatient() {
+  editPatient(res:any) {
+    if(res.length < 10){
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+     }
+     else{
     if (this.fgEditPatient.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
@@ -89,7 +93,7 @@ export class EditPatientComponent implements OnInit, OnDestroy {
       console.log('data is  ' + fgValue);
       this.callPatientApi(fgValue);
     }
-  }
+  }}
 
   /**
 * Method to called update appointment api

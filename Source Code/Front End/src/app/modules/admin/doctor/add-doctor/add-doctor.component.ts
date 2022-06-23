@@ -61,7 +61,11 @@ export class AddDoctorComponent implements OnInit, OnDestroy {
   /**
    * Method to check validation,when add button is clicked
    */
-  createDoctor(){
+  createDoctor(res : any){
+    if(res.length < 10){
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+     }
+     else{
     if (this.fgAddDoctor.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
@@ -69,7 +73,7 @@ export class AddDoctorComponent implements OnInit, OnDestroy {
       console.log('data is  ' + fgValue);
       this.callCreateDoctorApi(fgValue);
     }
-  }
+  }}
 
   /**
     * Method to called create Doctor api
