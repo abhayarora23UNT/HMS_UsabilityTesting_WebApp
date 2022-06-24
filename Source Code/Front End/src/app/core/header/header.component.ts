@@ -42,6 +42,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         console.log(data);
         if (data == '/login' || data == '/authentication/register' || data == '/authentication/login') {
           this.showUserDetails = false;
+          this.userName = null;
+          this.userRole = null;
         } else {
           this.showUserDetails = true;
           this.userName = this.storageService.getSessionStorageData('userName');
@@ -83,7 +85,34 @@ export class HeaderComponent implements OnInit, OnDestroy {
         });
       }
     });
-  
+
+  }
+
+  /**
+   * Method to navigate to home screen
+   */
+  setDashboardNav() {
+    let routerPath = '';
+    if (this.userRole) {
+      const roleType: any = this.userRole;
+      switch (roleType) {
+        case 'Admin':
+          routerPath = 'admin/dashboard/home';
+          break
+        case 'Doctor':
+          routerPath = 'doctor/dashboard/home';
+          break
+        case 'Patient':
+          routerPath = 'patient/dashboard/home';
+          break
+        case 'Staff':
+          routerPath = 'staff/dashboard/home';
+          break
+        default:
+          routerPath = 'admin/dashboard/home';
+      }
+      this.router.navigate([routerPath]);
+    }
   }
 
 }
