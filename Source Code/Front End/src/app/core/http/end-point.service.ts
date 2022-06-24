@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class EndPointService {
 
-  // Authentication Urls//
+  // Authentication Urls //
   registerUser='api/Login/CreateLogin';
   loginUser='api/Login/GetLoginAccess';
 
