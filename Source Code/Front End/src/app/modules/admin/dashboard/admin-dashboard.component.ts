@@ -15,7 +15,7 @@ export class AdminDashboardComponent implements OnInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   opened = true;
-  constructor(public dialog: MatDialog) {  }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
