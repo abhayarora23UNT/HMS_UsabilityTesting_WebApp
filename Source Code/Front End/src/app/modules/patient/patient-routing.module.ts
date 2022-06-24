@@ -34,7 +34,6 @@ const routes: Routes = [
       },
       {
         path: 'editPatientAppointment',
-        canDeactivate: [NavigationGuard],
         component: EditPatientAppointmentComponent,
       },
       {
@@ -46,17 +45,17 @@ const routes: Routes = [
         path: 'listPatientDoctors',
         component: ListPatientDoctorsComponent,
       },
-     
+
       {
         path: 'listTreatmentMedicine',
         component: ListTreatmentMedicinesComponent,
       },
-     
+
       {
         path: 'listAppointmentMedicine',
         component: ListAppointmentMedicinesComponent,
       },
-      
+
     ]
   },
 

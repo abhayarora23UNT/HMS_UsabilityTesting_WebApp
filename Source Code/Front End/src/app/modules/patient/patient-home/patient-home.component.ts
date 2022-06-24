@@ -21,19 +21,19 @@ export class PatientHomeComponent implements OnInit {
         "icon": "folder_special",
         // "count": 3,
         "title": "Pending Treatments",
-        "color": "red"
+        "color": "#DC3220"
       },
       {
         "icon": "access_time",
         // "count": 5,
         "title": "Appointment Medicines",
-        "color": "blue"
+        "color": "#005AB5"
       },
       {
         "icon": "medication",
         // "count": 2,
         "title": "Treatment Medicines",
-        "color": "green"
+        "color": "#40B0A6"
       },
       {
         "icon": "medication",

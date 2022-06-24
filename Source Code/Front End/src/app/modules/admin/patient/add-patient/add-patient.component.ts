@@ -17,7 +17,8 @@ import { ToastMessageService } from 'src/app/core/services/utils/toast-message.s
 export class AddPatientComponent implements OnInit,OnDestroy {
   Genders: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
   fgAddPatient!: FormGroup;
   isDataLoading = false;
@@ -50,6 +51,11 @@ export class AddPatientComponent implements OnInit,OnDestroy {
     });
   }
   createPatient(){
+    const phone1Val = this.fgAddPatient.controls['phone'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+    }
+     else{
     if (this.fgAddPatient.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
@@ -57,7 +63,7 @@ export class AddPatientComponent implements OnInit,OnDestroy {
       console.log('data is  ' + fgValue);
       this.callCreatePatientApi(fgValue);
     }
-  }
+  }}
 
   /**
     * Method to called create appointment api

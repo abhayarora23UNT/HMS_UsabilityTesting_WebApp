@@ -20,6 +20,7 @@ export enum Messages {
     Max_Length_Validation = 'Maximum characters allowed is ',
     Min_Length_Validation = 'Minimum characters allowed is ',
     Max_Length_Validation_int = 'Maximum digits allowed is ',
+    phn_Length_valdation = 'Please enter 10 digits phone number',
     Required_Validation = 'This is a required field',
     Invalid_Date_Entered = 'Invalid date entered',
     UnAuthorizedAccess = 'You are not authorized to use this application',
@@ -75,6 +76,8 @@ export enum Messages {
 
     Password_Validate_Message='New Password and Confirm New Password should be same',
     No_Records_Message='No Records Found',
+    Phone1_Field_Message='for field Phone 1',
+    Phone2_Field_Message='for field Phone 2',
 }
 
 

@@ -22,7 +22,8 @@ export class EditDoctorComponent implements OnInit , OnDestroy{
 
   genderList: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
 
   editDoctorData: any;
@@ -84,7 +85,12 @@ export class EditDoctorComponent implements OnInit , OnDestroy{
   }
 
   
-    editDoctor() {
+  editDoctor() {
+    const phone1Val = this.fgEditDoctor.controls['phone'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+    }
+    else {
       if (this.fgEditDoctor.status == Constants.FormInvalid) {
         this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
       } else {
@@ -93,6 +99,7 @@ export class EditDoctorComponent implements OnInit , OnDestroy{
         this.callDoctorApi(fgValue);
       }
     }
+  }
 
       /**
     * Method to called update appointment api

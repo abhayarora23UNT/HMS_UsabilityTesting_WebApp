@@ -17,7 +17,8 @@ import { ToastMessageService } from 'src/app/core/services/utils/toast-message.s
 export class AddDoctorComponent implements OnInit, OnDestroy {
   Genders: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
   fgAddDoctor!: FormGroup;
   isDataLoading = false;
@@ -60,13 +61,19 @@ export class AddDoctorComponent implements OnInit, OnDestroy {
   /**
    * Method to check validation,when add button is clicked
    */
-  createDoctor(){
-    if (this.fgAddDoctor.status == Constants.FormInvalid) {
-      this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
-    } else {
-      const fgValue = JSON.parse(JSON.stringify(this.fgAddDoctor.value));
-      console.log('data is  ' + fgValue);
-      this.callCreateDoctorApi(fgValue);
+  createDoctor() {
+    const phone1Val = this.fgAddDoctor.controls['phone'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+    }
+    else {
+      if (this.fgAddDoctor.status == Constants.FormInvalid) {
+        this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
+      } else {
+        const fgValue = JSON.parse(JSON.stringify(this.fgAddDoctor.value));
+        console.log('data is  ' + fgValue);
+        this.callCreateDoctorApi(fgValue);
+      }
     }
   }
 

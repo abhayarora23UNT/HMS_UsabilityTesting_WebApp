@@ -6,8 +6,8 @@
     //height: 100px;
     z-index: 2;
     .inner {
-        background: rgb(118,198,67);
-        background: linear-gradient(90deg, rgba(118,198,67,1) 0%, rgba(0,83,149,1) 100%);
+        background: rgb(255,194,10,1);
+        background: linear-gradient(90deg, rgba(0,90,181,1) 60%, rgba(153,79,10,1) 80%);
         height: 80px;
     }
     .logo {
@@ -18,13 +18,13 @@
             top: 6px;
             color: white;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 550;
             // padding-top: 10px;
         }
         .hms-text {
             color: white;
             font-size: 17px;
-            font-weight: bold;
+            font-weight: 600;
             position: absolute;
             left: 99px;
             top: 35px;
@@ -43,7 +43,7 @@
     .userName{
         color: $txt-white;
         .welcome-btn {
-            min-width: 277px;
+            min-width: auto;
             max-width: 550px;
             width: auto;
             color: $txt-white;
@@ -196,7 +196,7 @@
 }
 span.font-weight-bold.logout-btn {
     background: #fff;
-    color: #055792;
+    color: #006CD1;
     padding: 3px 10px;
     margin-left: 5px;
     font-weight: normal;
@@ -257,4 +257,7 @@ span.font-weight-bold.logout-btn:hover {
             }
         }
     }
+}
+.user-wlcme-name{
+    font-weight: 500;
 }

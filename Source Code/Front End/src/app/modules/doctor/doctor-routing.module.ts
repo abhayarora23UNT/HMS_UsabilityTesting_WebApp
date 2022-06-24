@@ -39,7 +39,6 @@ const routes: Routes = [
       },
       {
         path: 'editAppointment',
-        canDeactivate: [NavigationGuard],
         component: EditAppointmentComponent,
       },
       {
@@ -49,6 +48,7 @@ const routes: Routes = [
 
       {
         path: 'addTreatmentMedicine',
+        canDeactivate: [NavigationGuard],
         component: AddTreatmentMedicineComponent,
       },
       {
@@ -61,6 +61,7 @@ const routes: Routes = [
       },
       {
         path: 'addAppointmentMedicine',
+        canDeactivate: [NavigationGuard],
         component: AddAppointmentMedicineComponent,
       },
       {

@@ -16,7 +16,7 @@ import { ToastMessageService } from 'src/app/core/services/utils/toast-message.s
 })
 export class AddTreatmentMedicineComponent implements OnInit, OnDestroy {
 
-  fgAddTreatment!: FormGroup;
+  fgAddTreatmentMedicine!: FormGroup;
   isDataLoading = false;
   private onDestroy$: Subject<void> = new Subject<void>();
   treatmentIdList: any = [];   // dropdown list for doctor Id
@@ -47,7 +47,7 @@ export class AddTreatmentMedicineComponent implements OnInit, OnDestroy {
    * Method to create form group
    */
   createFormGroup() {
-    this.fgAddTreatment = this.formBuilder.group({
+    this.fgAddTreatmentMedicine = this.formBuilder.group({
       treatmentMedicineId: ['',],
       treatmentId: ['', Validators.required],
       medicineId: ['', Validators.required],
@@ -59,10 +59,10 @@ export class AddTreatmentMedicineComponent implements OnInit, OnDestroy {
    * Method to create Treatment
    */
   createTreatment() {
-    if (this.fgAddTreatment.status == Constants.FormInvalid) {
+    if (this.fgAddTreatmentMedicine.status == Constants.FormInvalid) {
       this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
     } else {
-      const fgValue = JSON.parse(JSON.stringify(this.fgAddTreatment.value));
+      const fgValue = JSON.parse(JSON.stringify(this.fgAddTreatmentMedicine.value));
       console.log('data is  ' + fgValue);
       fgValue.limit = +fgValue.limits
       this.callCreateTreatmentApi(fgValue);
@@ -82,6 +82,7 @@ export class AddTreatmentMedicineComponent implements OnInit, OnDestroy {
           this.isDataLoading = false;
           if (retData.status) {
             this.toastService.successMessage(Messages.CreateTreatmentSuccess);
+            this.fgAddTreatmentMedicine.markAsPristine();
             this.routetoListTreatmentScreen();
           } else {
             this.toastService.errorMessage(retData.message);

@@ -1,7 +1,4 @@
-
-
-
-
+<div style="height: 150%; overflow: hidden;">
     <div class="row mt-4 mr-1" >
         <div class="col-12" style="text-align:right">
             <button class="btn-regular" title="View Appointment" (click)="navigateToListTreatmentScreen()">
@@ -21,7 +18,7 @@
                     <input matInput placeholder="Name" formControlName="name" appOnlyAlphabets required>
                 </mat-form-field>
                 <mat-form-field class="field-full-width">
-                    <input matInput placeholder="Duration" formControlName="duration" appOnlyNumeric>
+                    <input matInput placeholder="Duration" formControlName="duration" appOnlyNumeric required>
                 </mat-form-field>
                 <mat-form-field class="field-full-width">
                     <mat-label>OperativeRoomId</mat-label>
@@ -55,3 +52,4 @@
 <section class="spinner-style">
     <mat-spinner id="matSpinner" [diameter]="50" *ngIf="isDataLoading"></mat-spinner>
 </section>
+</div>

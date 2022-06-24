@@ -9,21 +9,21 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" mode="side" [(opened)]="opened" class="mat-elevation-z8">
 
-        <button mat-button class="menu-button" [routerLink]="['home']">
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['home']">
             <mat-icon>home</mat-icon>
-            <span style="padding-left: 5px;">Dashboard</span>
+            <span style="padding-left: 5px; font-size: small;">Dashboard</span>
         </button>
-        <button mat-button class="menu-button" [routerLink]="['listAppointmentMedicine']">
-            <mat-icon>person</mat-icon>
-            <span style="padding-left: 5px;">Appointment Medicine</span>
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['listAppointmentMedicine']">
+            <mat-icon>medication</mat-icon>
+            <span style="padding-left: 5px; font-size: small;">Appointment Medicine</span>
         </button>
-        <button mat-button class="menu-button" [routerLink]="['listTreatmentMedicine']">
-            <mat-icon>tablet</mat-icon>
-            <span style="padding-left: 5px;">Treatment Medicine</span>
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['listTreatmentMedicine']">
+            <mat-icon>gradient</mat-icon>
+            <span style="padding-left: 5px; font-size: small;">Treatment Medicine</span>
         </button>
-        <button mat-button class="menu-button" [routerLink]="['listAppointment']">
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['listAppointment']">
             <mat-icon>timelapse</mat-icon>
-            <span style="padding-left: 5px;">Appointment</span>
+            <span style="padding-left: 5px; font-size: small;">Appointment</span>
         </button>
 
     </mat-sidenav>

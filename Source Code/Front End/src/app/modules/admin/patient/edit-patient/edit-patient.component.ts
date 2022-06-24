@@ -21,7 +21,8 @@ export class EditPatientComponent implements OnInit, OnDestroy {
   private onDestroy$: Subject<void> = new Subject<void>();
   genderList: string[] = [
     'Male',
-    'Female'
+    'Female',
+    'Others'
   ]
 
   editPatientData: any;
@@ -81,12 +82,18 @@ export class EditPatientComponent implements OnInit, OnDestroy {
   }
 
   editPatient() {
-    if (this.fgEditPatient.status == Constants.FormInvalid) {
-      this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
-    } else {
-      const fgValue = JSON.parse(JSON.stringify(this.fgEditPatient.value));
-      console.log('data is  ' + fgValue);
-      this.callPatientApi(fgValue);
+    const phone1Val = this.fgEditPatient.controls['phone'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation);
+    }
+    else {
+      if (this.fgEditPatient.status == Constants.FormInvalid) {
+        this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
+      } else {
+        const fgValue = JSON.parse(JSON.stringify(this.fgEditPatient.value));
+        console.log('data is  ' + fgValue);
+        this.callPatientApi(fgValue);
+      }
     }
   }
 

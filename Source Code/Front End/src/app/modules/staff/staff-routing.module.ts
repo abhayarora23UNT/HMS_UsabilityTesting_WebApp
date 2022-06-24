@@ -33,7 +33,6 @@ const routes: Routes = [
       },
       {
         path: 'editPatient',
-        canDeactivate: [NavigationGuard],
         component: EditPatientComponent,
       },
       {

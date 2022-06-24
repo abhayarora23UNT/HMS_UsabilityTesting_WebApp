@@ -29,11 +29,11 @@
 
                 <ng-container matColumnDef="cost">
                     <th class="w-18" mat-header-cell *matHeaderCellDef>Cost</th>
-                    <td mat-cell *matCellDef="let element"> {{element.cost}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.cost}}$ </td>
                 </ng-container>
 
                 <ng-container matColumnDef="availabelQuantity">
-                    <th class="w-18" mat-header-cell *matHeaderCellDef>AvailabelQuantity</th>
+                    <th class="w-18" mat-header-cell *matHeaderCellDef>Available Quantity</th>
                     <td mat-cell *matCellDef="let element"> {{element.availabelQuantity}} </td>
                 </ng-container>
                 <tr mat-header-row *matHeaderRowDef="appointmentColumns"></tr>

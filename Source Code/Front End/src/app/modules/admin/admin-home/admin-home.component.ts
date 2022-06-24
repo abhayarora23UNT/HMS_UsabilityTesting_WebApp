@@ -21,19 +21,19 @@ export class AdminHomeComponent implements OnInit {
         "icon": "folder_special",
         // "count": 10,
         "title": "Specializations",
-        "color": "red"
+        "color": "#DC3220"
       },
       {
         "icon": "supervisor_account",
         // "count": 5,
         "title": "Doctors",
-        "color": "blue"
+        "color": "#005AB5"
       },
       {
         "icon": "person",
         // "count": 2,
         "title": "Patients",
-        "color": "green"
+        "color": "#40B0A6"
       },
       {
         "icon": "local_hospital",

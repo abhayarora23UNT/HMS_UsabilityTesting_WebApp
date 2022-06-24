@@ -9,31 +9,31 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" mode="side" [(opened)]="opened" class="mat-elevation-z8 patient-nav">
 
-        <button mat-button class="menu-button" [routerLink]="['home']">
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['home']">
             <mat-icon>home</mat-icon>
             <span style="padding-left: 5px;">Dashboard</span>
         </button>
-        <button mat-button class="menu-button" [routerLink]="['listPatientDoctors']">
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['listPatientDoctors']">
             <mat-icon>people</mat-icon>
             <span style="padding-left: 5px;">Doctors</span>
         </button>
-        <button mat-button class="menu-button" [routerLink]="['listPatientAppointment']">
+        <button mat-button class="menu-button w-100 text-left" [routerLink]="['listPatientAppointment']">
             <mat-icon>timelapse</mat-icon>
             <span style="padding-left: 5px;">Appointment</span>
         </button>
         <mat-accordion>
-            <mat-expansion-panel hideToggle style="background: #002B5C;" class="mat-elevation-z0" >
+            <mat-expansion-panel hideToggle style="background: #005AB5;" class="mat-elevation-z0" >
                 <mat-expansion-panel-header style="padding-left: 16px;padding-right: 16px;">
                     <mat-panel-title style="color: white;">
-                        <mat-icon>tablet</mat-icon>
+                        <mat-icon>medication</mat-icon>
                         <span style="padding-left: 5px;">Medicines</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <button mat-button class="menu-button" [routerLink]="['listTreatmentMedicine']">
+                <button mat-button class="menu-button w-100 text-left" [routerLink]="['listTreatmentMedicine']">
                     <span style="padding-left: 5px;color: white;">Treatment Medicines</span>
                 </button>
         
-                <button mat-button class="menu-button" [routerLink]="['listAppointmentMedicine']">
+                <button mat-button class="menu-button w-100 text-left" [routerLink]="['listAppointmentMedicine']">
                     <span style="padding-left: 5px;color: white;">Appointment Medicines</span>
                 </button>
             </mat-expansion-panel>

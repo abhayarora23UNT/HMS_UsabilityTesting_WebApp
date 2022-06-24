@@ -180,7 +180,7 @@ mat-sidenav {
   justify-content: end;
   height: 45px;
   button{
-      background: #20727E;
+      background: #006CD1;
       color: white;
       padding: 3px 10px;
       margin-left: 5px;
@@ -192,7 +192,7 @@ mat-sidenav {
 }
 
 .btn-regular{
-      background: #479863;
+      background: #994F00;
       color: white;
       padding: 3px 10px;
       font-weight:500;
@@ -213,4 +213,9 @@ mat-sidenav {
 
 .txt-center{
   text-align: center !important;
+}
+
+.cross-icon{
+  color: black;
+  font-weight: bold;
 }

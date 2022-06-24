@@ -115,5 +115,8 @@
       }
     }
   },
-  "defaultProject": "HmsApp"
+  "defaultProject": "HmsApp",
+  "cli": {
+    "analytics": "a3b826dd-1d43-4fab-8d57-4e29fad4d006"
+  }
 }

@@ -50,15 +50,25 @@ export class AddHospitalBranchComponent implements OnInit , OnDestroy {
     this.router.navigate(['admin/dashboard/listHospitalBranch']);
   }
 
-  createHospitalBranch(){
-    if (this.fgAddHospitalBranch.status == Constants.FormInvalid) {
-      this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
-    } else {
-      const fgValue = JSON.parse(JSON.stringify(this.fgAddHospitalBranch.value));
-      console.log('data is  ' + fgValue);
-      this.callCreateHospitalBranchApi(fgValue);
+  createHospitalBranch() {
+    const phone1Val = this.fgAddHospitalBranch.controls['phone1'].value;
+    const phone2Val = this.fgAddHospitalBranch.controls['phone2'].value;
+    if (phone1Val !== '' && phone1Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation + ' ' + Messages.Phone1_Field_Message);
+    } else if (phone2Val !== '' && phone2Val.length < 10) {
+      this.toastService.errorMessage(Messages.phn_Length_valdation + ' ' + Messages.Phone2_Field_Message);
+    }
+    else {
+      if (this.fgAddHospitalBranch.status == Constants.FormInvalid) {
+        this.toastService.errorMessage(Messages.Mandatory_Fields_Validation);
+      } else {
+        const fgValue = JSON.parse(JSON.stringify(this.fgAddHospitalBranch.value));
+        console.log('data is  ' + fgValue);
+        this.callCreateHospitalBranchApi(fgValue);
+      }
     }
   }
+
    /**
     * Method to called create appointment api
     * @param respData 

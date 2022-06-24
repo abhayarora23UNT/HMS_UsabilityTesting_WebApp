@@ -60,6 +60,7 @@ const routes: Routes = [
 
       {
         path: 'addDoctor',
+        canDeactivate: [NavigationGuard],
         component: AddDoctorComponent,
       },
       {
@@ -68,11 +69,11 @@ const routes: Routes = [
       },
       {
         path: 'editDoctor',
-        canDeactivate: [NavigationGuard],
         component: EditDoctorComponent,
       },
       {
         path: 'addSpecialization',
+        canDeactivate: [NavigationGuard],
         component: AddSpecializationComponent,
       },
       {
@@ -81,12 +82,12 @@ const routes: Routes = [
       },
       {
         path: 'editSpecialization',
-        canDeactivate: [NavigationGuard],
         component: EditSpecializationComponent,
       },
 
       {
         path: 'addHospitalBranch',
+        canDeactivate: [NavigationGuard],
         component: AddHospitalBranchComponent,
       },
       {
@@ -95,7 +96,6 @@ const routes: Routes = [
       },
       {
         path: 'editHospitalBranch',
-        canDeactivate: [NavigationGuard],
         component: EditHospitalBranchComponent,
       },
 
@@ -109,7 +109,6 @@ const routes: Routes = [
       },
       {
         path: 'editMedicine',
-        canDeactivate: [NavigationGuard],
         component: EditMedicineComponent,
       },
       {
@@ -122,7 +121,6 @@ const routes: Routes = [
       },
       {
         path: 'editRoomType',
-        canDeactivate: [NavigationGuard],
         component: EditRoomTypeComponent,
       },
 
@@ -136,6 +134,7 @@ const routes: Routes = [
       },
       {
         path: 'addPatient',
+        canDeactivate: [NavigationGuard],
         component: AddPatientComponent,
       },
       {
@@ -144,12 +143,12 @@ const routes: Routes = [
       },
       {
         path: 'editPatient',
-        canDeactivate: [NavigationGuard],
         component: EditPatientComponent,
       },
 
       {
         path: 'addTreatment',
+        canDeactivate: [NavigationGuard],
         component: AddTreatmentComponent,
       },
       {
@@ -158,7 +157,6 @@ const routes: Routes = [
       },
       {
         path: 'editTreatment',
-        canDeactivate: [NavigationGuard],
         component: EditTreatmentComponent,
       },
       {
@@ -171,7 +169,6 @@ const routes: Routes = [
       },
       {
         path: 'editOperativeRoom',
-        canDeactivate: [NavigationGuard],
         component: EditOperativeComponent,
       },
     ]
