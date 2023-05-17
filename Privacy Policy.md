@@ -1,5 +1,7 @@
 Privacy Policy
 
+This application was developed as part of University Project
+
 Last updated: 05/12/2023
 
 This privacy policy explains how we collect, use, and share information about you when you use our public GitHub projects. Our privacy policy is designed to protect our intellectual property rights and prevent unauthorized copying of our code.
